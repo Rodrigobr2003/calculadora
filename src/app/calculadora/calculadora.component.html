@@ -1,7 +1,7 @@
 <div class="container">
   <div class="content">
-    <input type="number" />
-    <select>
+    <input type="number" [(ngModel)]="num1" />
+    <select [(ngModel)]="operator">
       <option value="+">+</option>
       <option value="-">-</option>
       <option value="*">*</option>
@@ -9,11 +9,11 @@
       <option value="^">^</option>
       <option value="%">%</option>
     </select>
-    <input type="number" />
-    <button>Calcular</button>
+    <input type="number" [(ngModel)]="num2" />
+    <button (click)="calculate()">Calcular</button>
   </div>
 
   <div>
-    <h2>Resultado:</h2>
+    <h2>Resultado: {{ result }}</h2>
   </div>
 </div>
